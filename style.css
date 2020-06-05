@@ -1,0 +1,113 @@
+body a{
+  position: absolute;
+  cursor: pointer;
+}
+
+body a.astro{
+  top: 700px ;
+  left: 65px;
+}
+
+body a.fog{
+  top: 700px;
+  left: 210px;
+}
+
+body a.twitter{
+  top: 700px;
+  left: 1365px;
+}
+
+body a.facebook{
+  top: 750px;
+  left: 1370px;
+}
+
+body a.linkedin{
+  top: 788px;
+  left: 1365px;
+}
+
+body{
+  margin:0;
+  padding: 0;
+  height: 100vh;
+
+}
+
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container .circle{
+  position: absolute;
+  width: 100%;
+  height: 110vh;
+  background-attachment: fixed;
+  background-position: center;
+  transition: 2s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .circle:hover{
+  z-index: 1;
+}
+.container .circle.circle1{
+  background: url(img1.png);
+  clip-path: circle(100px at 960px 400px);
+}
+
+.container .circle.circle2{
+  background: url(img2.png);
+  clip-path: circle(100px at 1170px 270px);
+}
+
+.container .circle.circle3{
+  background: url(img3.png);
+  clip-path: circle(100px at 960px 660px);
+}
+
+.container .circle.circle4{
+  background: url(img4.png);
+  clip-path: circle(100px at 1170px 530px);
+}
+
+.container .circle:active{
+  clip-path: circle(1400px at 20% center);
+  transition: 2s;
+}
+.container .circle .content{
+  mask-widht: 800px;
+  box-sizing: border-box;
+  padding: 40px;
+  font-family: consolas;
+  background: rgba(0,0,0,.8);
+  opacity: 0;
+  transition: 1s;
+}
+
+.container .circle:active .content{
+  opacity: 1;
+  transition-delay: 1s;
+}
+
+.container .circle .content h2{
+  margin: 0;
+  padding: 0;
+  color:#fff;
+  font-size:4em;
+  text-align: center;
+}
+
+.container .circle .content p{
+  margin: 0;
+  padding: 0;
+  color:#fff;
+  font-size:1.2em;
+}
